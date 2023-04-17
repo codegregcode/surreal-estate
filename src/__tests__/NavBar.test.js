@@ -17,4 +17,11 @@ describe("NavBar", () => {
     expect(viewProperties).toBeInTheDocument();
     expect(addAProperty).toBeInTheDocument();
   });
+
+  it("renders logo", () => {
+    render(<NavBar />);
+    const logoAlt = screen.getByAltText(/logo/);
+
+    expect(logoAlt).toBeInTheDocument();
+  });
 });
